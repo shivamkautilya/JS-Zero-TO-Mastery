@@ -1,3 +1,5 @@
+/*
+//SECTION 2 FUNDAMENTALS OF JAVASCRIPT PART 1
 //Lecture: Variables and Values
 const country = "India";
 const continent = "Asia";
@@ -98,3 +100,23 @@ switch (languageLowerCase) {
 
 const isAvgPopulation = population >= 33 ? "above average" : "below average";
 console.log(`${country}'s population is ${isAvgPopulation}.`);
+*/
+
+//SECTION 3 - FUNDAMENTALS OF JAVASCRIPT PART 2
+//LECTURE Functions
+function describeCountry(country, population, capitalCity) {
+  const countryDescription = `${country} has ${population} million population and it's capital city is ${capitalCity}.`;
+  return countryDescription;
+  // console.log(countryDescription);
+}
+
+const describeIndia = describeCountry("India", 1350, "New Delhi");
+const desribeFinland = describeCountry("Finland", 6, "Helsinki");
+const describeUSA = describeCountry(
+  "United States of America",
+  800,
+  "Washington DC"
+);
+console.log(describeIndia);
+console.log(desribeFinland);
+console.log(describeUSA);
