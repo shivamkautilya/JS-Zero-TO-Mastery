@@ -103,6 +103,11 @@ console.log(`${country}'s population is ${isAvgPopulation}.`);
 */
 
 //SECTION 3 - FUNDAMENTALS OF JAVASCRIPT PART 2
+//population store in const
+const worldPopulation = 7900;
+const populationChina = 1441;
+const populationIndia = 1350;
+const populationFinland = 9;
 //LECTURE Functions
 function describeCountry(country, population, capitalCity) {
   const countryDescription = `${country} has ${population} million population and it's capital city is ${capitalCity}.`;
@@ -110,8 +115,12 @@ function describeCountry(country, population, capitalCity) {
   // console.log(countryDescription);
 }
 
-const describeIndia = describeCountry("India", 1350, "New Delhi");
-const desribeFinland = describeCountry("Finland", 6, "Helsinki");
+const describeIndia = describeCountry("India", populationIndia, "New Delhi");
+const desribeFinland = describeCountry(
+  "Finland",
+  populationFinland,
+  "Helsinki"
+);
 const describeUSA = describeCountry(
   "United States of America",
   800,
@@ -122,56 +131,71 @@ console.log(desribeFinland);
 console.log(describeUSA);
 
 //LECTURE: Function Declarations vs. Expressions
+/*
 // function declaration
-const worldPopulation = 7900;
 function percentageOfWorld1(population) {
   return (population / worldPopulation) * 100;
 }
 
-let percentagePopulatonIndia = percentageOfWorld1(1350);
-let percentagePopulatonChina = percentageOfWorld1(1441);
-let percentagePopulatonFinland = percentageOfWorld1(9);
+let percentagePopulationIndia = percentageOfWorld1(populationIndia);
+let percentagePopulatinChina = percentageOfWorld1(populationChina);
+let percentagePopulationFinland = percentageOfWorld1(populationFinland);
 // INDIA,CHINA,FINLAND
 console.log(
-  `China has population about ${percentagePopulatonChina} percentage of world's population.`
+  `China has population about ${percentagePopulatinChina} percentage of world's population.`
 );
 console.log(
-  `India has population about ${percentagePopulatonIndia} percentage of world's population.`
+  `India has population about ${percentagePopulationIndia} percentage of world's population.`
 );
 console.log(
-  `Finland has population about ${percentagePopulatonFinland} percentage of world's population.`
+  `Finland has population about ${percentagePopulationFinland} percentage of world's population.`
 );
 
 // function expression
 const percentageOfWorld2 = function (population) {
   return (population / worldPopulation) * 100;
 };
-percentagePopulatonIndia = percentageOfWorld2(1350);
-percentagePopulatonChina = percentageOfWorld2(1440);
-percentagePopulatonFinland = percentageOfWorld2(9);
+percentagePopulationIndia = percentageOfWorld2(populationIndia);
+percentagePopulatinChina = percentageOfWorld2(populationChina);
+percentagePopulationFinland = percentageOfWorld2(populationFinland);
 // INDIA,CHINA,FINLAND
 console.log(
-  `China has population about ${percentagePopulatonChina} percentage of world's population.`
+  `China has population about ${percentagePopulatinChina} percentage of world's population.`
 );
 console.log(
-  `India has population about ${percentagePopulatonIndia} percentage of world's population.`
+  `India has population about ${percentagePopulationIndia} percentage of world's population.`
 );
 console.log(
-  `Finland has population about ${percentagePopulatonFinland} percentage of world's population.`
+  `Finland has population about ${percentagePopulationFinland} percentage of world's population.`
 );
-
+*/
 //LECTURE: Arrow Functions
 const percentageOfWorld3 = (population) => (population / worldPopulation) * 100;
-percentagePopulatonIndia = percentageOfWorld3(1350);
-percentagePopulatonChina = percentageOfWorld3(1440);
-percentagePopulatonFinland = percentageOfWorld3(9);
+percentagePopulationIndia = percentageOfWorld3(populationIndia);
+percentagePopulatinChina = percentageOfWorld3(populationChina);
+percentagePopulationFinland = percentageOfWorld3(populationFinland);
 // INDIA,CHINA,FINLAND
 console.log(
-  `China has population about ${percentagePopulatonChina} percentage of world's population.`
+  `China has population about ${percentagePopulatinChina} percentage of world's population.`
 );
 console.log(
-  `India has population about ${percentagePopulatonIndia} percentage of world's population.`
+  `India has population about ${percentagePopulationIndia} percentage of world's population.`
 );
 console.log(
-  `Finland has population about ${percentagePopulatonFinland} percentage of world's population.`
+  `Finland has population about ${percentagePopulationFinland} percentage of world's population.`
 );
+// LECTURE: Functions Calling Other Functions
+const describePopulation = function (country, population) {
+  const calcPopulationPercentage = percentageOfWorld3(population);
+  return `${country} has ${population} million population,which is about ${calcPopulationPercentage} % of world's population.`;
+};
+
+const describePopulationIndia = describePopulation("India", populationIndia);
+const describePopulationChina = describePopulation("China", populationChina);
+const describePopulationFinland = describePopulation(
+  "Finland",
+  populationFinland
+);
+console.log(describePopulationChina);
+console.log(describePopulationIndia);
+console.log(describePopulationFinland);
