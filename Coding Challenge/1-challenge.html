@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <style>
+      body {
+        background-color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      //BMI Calculator
+      //Data 1
+      console.log("Data 1");
+      var markWeight = 78;
+      var markHeight = 1.69;
+
+      var johnWeight = 92;
+      var johnHeight = 1.95;
+
+      var markBMI = markWeight / markHeight ** 2;
+      var johnBMI = johnWeight / johnHeight ** 2;
+      console.log("Mark BMI =", markBMI);
+      console.log("John BMI =", johnBMI);
+      var markHigherBMI = markBMI > johnBMI;
+      // console.log("Does Mark has higher BMI? =", markHigherBMI);
+      if (markHigherBMI) {
+        console.log("Mark's BMI is higher than John's!");
+        console.log(
+          `Mark's BMI (${markBMI}) is higher than John's BMI (${johnBMI})`
+        );
+      } else {
+        console.log("John's BMI is higher than Mark's!");
+        console.log(
+          `John's BMI (${johnBMI}) is higher than Mark's BMI (${markBMI})`
+        );
+      }
+
+      /*
+      //Data 2
+      console.log("Data 2");
+      markWeight = 95;
+      markHeight = 1.88;
+
+      johnWeight = 85;
+      johnHeight = 1.76;
+      markBMI = markWeight / markHeight ** 2;
+      johnBMI = johnWeight / johnHeight ** 2;
+      console.log("Mark BMI =", markBMI);
+      console.log("John BMI =", johnBMI);
+      var markHigherBMI = markBMI > johnBMI;
+      console.log("Does Mark has highr BMI? =", markHigherBMI);
+      */
+    </script>
+  </body>
+</html>

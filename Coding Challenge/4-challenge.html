@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Challenge #4</title>
+  </head>
+  <body>
+    <script>
+      console.log("Coding challenge #4");
+      const bill = Number(prompt("Enter amount of Bill."));
+      const tip = bill > 50 && bill < 300 ? bill * 0.15 : bill * 0.2;
+      // console.log(bill, tip);
+      const tipUpto2Decimals = parseFloat(tip.toFixed(2));
+      // tipUpto2Decimals = parseFloat(tipUpto2Decimals);
+      console.log(bill, tipUpto2Decimals);
+      if (bill <= 0) {
+        console.log("Please enter amount above 0.");
+      } else if (bill > 0) {
+        console.log(
+          `The bill was ${bill}, the tip was ${tipUpto2Decimals}, and the total value ${
+            bill + tipUpto2Decimals
+          }.`
+        );
+      } else {
+        console.log("Please enter valid number.");
+      }
+    </script>
+  </body>
+</html>

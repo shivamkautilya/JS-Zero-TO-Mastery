@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>#3 Coding Challenge</title>
+  </head>
+  <body>
+    <script>
+      // DATA 1
+      // Team Dolphin
+      console.log("Team Dolphin score");
+      var scoreDolphin1 = 96;
+      var scoreDolphin2 = 108;
+      var scoreDolphin3 = 89;
+      console.log(`
+      1st round = ${scoreDolphin1}
+      2nd round = ${scoreDolphin2}
+      3rd round = ${scoreDolphin3}`);
+      var avgDolphinScore = (scoreDolphin1 + scoreDolphin2 + scoreDolphin3) / 3;
+      console.log(`Team Dolphin Average Score = ${avgDolphinScore}`);
+
+      // Team Koala
+      console.log("Team Koala Score");
+      var scoreKoala1 = 88;
+      var scoreKoala2 = 91;
+      var scoreKoala3 = 110;
+      console.log(`
+      1st round = ${scoreKoala1}
+      2nd round = ${scoreKoala2}
+      3rd round = ${scoreKoala3}`);
+      var avgKoalaScore = (scoreKoala1 + scoreKoala2 + scoreKoala3) / 3;
+      console.log(`Team Dolphin Average Score = ${avgKoalaScore}`);
+      // Team Winner
+      if (avgDolphinScore === avgKoalaScore) {
+        console.log("It's a draw.Both teams have scored equal points");
+      } else if (avgDolphinScore > avgKoalaScore) {
+        console.log(
+          `Team Dolphin has won by ${avgDolphinScore - avgKoalaScore} points`
+        );
+      } else {
+        console.log(
+          `Team Koala has won by ${avgKoalaScore - avgDolphinScore} points`
+        );
+      }
+    </script>
+  </body>
+</html>
