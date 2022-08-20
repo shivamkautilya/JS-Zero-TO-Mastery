@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SECTION 3 - CODING CHALLENGE 1</title>
+  </head>
+  <body>
+    <script>
+      const calcAverage = (score1, score2, score3) =>
+        (score1 + score2 + score3) / 3;
+      const avgDolphinScore = calcAverage(44, 23, 71);
+      const avgKoalaScore = calcAverage(65, 54, 49);
+
+      console.log(avgDolphinScore, avgKoalaScore); //all ok
+      function checkWinner(avgDolphinScore, avgKoalaScore) {
+        if (avgDolphinScore > avgKoalaScore * 2) {
+          console.log(`Team Dolphin has won!!`);
+          return;
+        } else if (avgKoalaScore > avgDolphinScore * 2) {
+          console.log("Team Koala has won!!");
+          return;
+        } else {
+          console.log("No team has won!!!");
+          return;
+        }
+      }
+      const winner1 = checkWinner(avgDolphinScore, avgKoalaScore);
+      console.log(winner1);
+    </script>
+  </body>
+</html>
