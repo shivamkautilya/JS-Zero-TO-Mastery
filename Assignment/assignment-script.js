@@ -159,3 +159,19 @@ console.log(
 console.log(
   `Finland has population about ${percentagePopulatonFinland} percentage of world's population.`
 );
+
+//LECTURE: Arrow Functions
+const percentageOfWorld3 = (population) => (population / worldPopulation) * 100;
+percentagePopulatonIndia = percentageOfWorld3(1350);
+percentagePopulatonChina = percentageOfWorld3(1440);
+percentagePopulatonFinland = percentageOfWorld3(9);
+// INDIA,CHINA,FINLAND
+console.log(
+  `China has population about ${percentagePopulatonChina} percentage of world's population.`
+);
+console.log(
+  `India has population about ${percentagePopulatonIndia} percentage of world's population.`
+);
+console.log(
+  `Finland has population about ${percentagePopulatonFinland} percentage of world's population.`
+);
