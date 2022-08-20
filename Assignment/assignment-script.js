@@ -120,3 +120,42 @@ const describeUSA = describeCountry(
 console.log(describeIndia);
 console.log(desribeFinland);
 console.log(describeUSA);
+
+//LECTURE: Function Declarations vs. Expressions
+// function declaration
+const worldPopulation = 7900;
+function percentageOfWorld1(population) {
+  return (population / worldPopulation) * 100;
+}
+
+let percentagePopulatonIndia = percentageOfWorld1(1350);
+let percentagePopulatonChina = percentageOfWorld1(1441);
+let percentagePopulatonFinland = percentageOfWorld1(9);
+// INDIA,CHINA,FINLAND
+console.log(
+  `China has population about ${percentagePopulatonChina} percentage of world's population.`
+);
+console.log(
+  `India has population about ${percentagePopulatonIndia} percentage of world's population.`
+);
+console.log(
+  `Finland has population about ${percentagePopulatonFinland} percentage of world's population.`
+);
+
+// function expression
+const percentageOfWorld2 = function (population) {
+  return (population / worldPopulation) * 100;
+};
+percentagePopulatonIndia = percentageOfWorld2(1350);
+percentagePopulatonChina = percentageOfWorld2(1440);
+percentagePopulatonFinland = percentageOfWorld2(9);
+// INDIA,CHINA,FINLAND
+console.log(
+  `China has population about ${percentagePopulatonChina} percentage of world's population.`
+);
+console.log(
+  `India has population about ${percentagePopulatonIndia} percentage of world's population.`
+);
+console.log(
+  `Finland has population about ${percentagePopulatonFinland} percentage of world's population.`
+);
