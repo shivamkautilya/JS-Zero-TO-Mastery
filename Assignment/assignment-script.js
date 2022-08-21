@@ -108,6 +108,7 @@ const worldPopulation = 7900;
 const populationChina = 1441;
 const populationIndia = 1350;
 const populationFinland = 9;
+const populationUSA = 332;
 //LECTURE Functions
 function describeCountry(country, population, capitalCity) {
   const countryDescription = `${country} has ${population} million population and it's capital city is ${capitalCity}.`;
@@ -199,3 +200,34 @@ const describePopulationFinland = describePopulation(
 console.log(describePopulationChina);
 console.log(describePopulationIndia);
 console.log(describePopulationFinland);
+
+//LECTURE: Introduction to Arrays
+const populations = new Array(
+  populationChina,
+  populationIndia,
+  populationFinland,
+  populationUSA
+);
+console.log(populations.length === 4);
+
+const percentages = [
+  percentageOfWorld3(populations[0]),
+  percentageOfWorld3(populations[1]),
+  percentageOfWorld3(populations[2]),
+  percentageOfWorld3(populations[3]),
+];
+console.log(percentages);
+
+// LECTURE: Basic Array Operations (Methods)
+const neighboursIndia = ["China", "Pakistan", "Sri Lanka", "Nepal"];
+console.log(neighboursIndia.push("Utopia"));
+console.log(neighboursIndia);
+neighboursIndia.pop();
+console.log(neighboursIndia);
+// console.log(neighboursIndia.includes("Germany"));
+if (!neighboursIndia.includes("Germany")) {
+  console.log("Probably not your neighbouring country.");
+}
+
+neighboursIndia[neighboursIndia.indexOf("China")] = "Republic of China";
+console.log(neighboursIndia);
