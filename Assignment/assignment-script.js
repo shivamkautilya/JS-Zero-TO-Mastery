@@ -1,9 +1,12 @@
 /*
 //SECTION 2 FUNDAMENTALS OF JAVASCRIPT PART 1
 //Lecture: Variables and Values
+*/
 const country = "India";
 const continent = "Asia";
 let population = 1350;
+const language = "Hindi";
+/*
 console.log("Country =", country);
 console.log("Continent =", continent);
 console.log("Population =", population, "Million");
@@ -109,14 +112,15 @@ const populationChina = 1441;
 const populationIndia = 1350;
 const populationFinland = 9;
 const populationUSA = 332;
+const capitalIndia = "New Delhi";
 //LECTURE Functions
 function describeCountry(country, population, capitalCity) {
   const countryDescription = `${country} has ${population} million population and it's capital city is ${capitalCity}.`;
   return countryDescription;
-  // console.log(countryDescription);
+  console.log(countryDescription);
 }
 
-const describeIndia = describeCountry("India", populationIndia, "New Delhi");
+const describeIndia = describeCountry("India", populationIndia, capitalIndia);
 const desribeFinland = describeCountry(
   "Finland",
   populationFinland,
@@ -231,3 +235,27 @@ if (!neighboursIndia.includes("Germany")) {
 
 neighboursIndia[neighboursIndia.indexOf("China")] = "Republic of China";
 console.log(neighboursIndia);
+//LECTURE: Introduction to Objects
+const myCountry = {
+  country: country,
+  capital: capitalIndia,
+  language: language,
+  continent: continent,
+  population: populationIndia,
+  neighbours: neighboursIndia,
+};
+console.log(myCountry);
+console.log(
+  `${myCountry.country} has 
+  ${myCountry.population} 
+  million people.It's official language is ${myCountry.language},
+  ${[myCountry.neighbours.length]}
+  neighbouring countries
+  and a capital called ${myCountry.capital}.`
+);
+
+myCountry.population += 2;
+myCountry["population"] -= 2;
+
+console.log(myCountry.population);
+console.log(myCountry);
