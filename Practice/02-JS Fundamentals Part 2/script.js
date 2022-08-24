@@ -30,11 +30,18 @@ const jonas = {
   age: 2037 - 1991,
   job: "teacher",
   friends: ["Michael", "Peter", "Steven"],
+  hasDriverLicense: true,
+
+  getSummary: function () {
+    return `${this.firstName} is a ${this.age}-years old and has ${
+      this.hasDriverLicense ? "a" : "no"
+    } driver's license.`;
+  },
 };
 console.log(jonas);
 
-console.log(jonas.lastName);
-console.log(jonas["lastName"]);
+console.log(jonas.lastName); //Dot Notation
+console.log(jonas["lastName"]); //Bracket Notation
 
 const nameKey = "Name";
 console.log(jonas["first" + nameKey]);
@@ -59,3 +66,6 @@ console.log(
     jonas.friends.length,
   ]} friends, and his bestfriend is ${[jonas.friends[0]]}.`
 );
+
+//LECTURE: Object Methods
+console.log(jonas.getSummary());
