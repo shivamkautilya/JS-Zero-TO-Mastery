@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Challnege #3 - Section 3</title>
+  </head>
+  <body>
+    <script>
+      const markDetails = {
+        firstName: "Mark",
+        lastName: "Miller",
+        height: 1.69,
+        weight: 78,
+        calcBMI: function () {
+          return this.weight / this.height ** 2;
+        },
+      };
+      console.log(markDetails, markDetails.calcBMI());
+
+      const johnDetails = {
+        firstName: "John",
+        lastName: "Smith",
+        height: 1.95,
+        weight: 92,
+        calcBMI: function () {
+          return this.weight / this.height ** 2;
+        },
+      };
+      console.log(johnDetails, johnDetails.calcBMI());
+      if (markDetails.calcBMI() > johnDetails.calcBMI()) {
+        console.log(
+          `${markDetails.firstName} ${
+            markDetails.lastName
+          }'s BMI (${markDetails.calcBMI()}) is greater than ${
+            johnDetails.firstName
+          } ${johnDetails.lastName}'s BMI (${johnDetails.calcBMI()}).`
+        );
+      } else {
+        console.log(
+          `${johnDetails.firstName} ${
+            johnDetails.lastName
+          }'s BMI (${johnDetails.calcBMI()}) is greater than ${
+            markDetails.firstName
+          } ${markDetails.lastName}'s BMI (${markDetails.calcBMI()}).`
+        );
+      }
+    </script>
+  </body>
+</html>
