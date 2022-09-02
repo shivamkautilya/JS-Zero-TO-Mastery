@@ -236,6 +236,32 @@ if (!neighboursIndia.includes("Germany")) {
 neighboursIndia[neighboursIndia.indexOf("China")] = "Republic of China";
 console.log(neighboursIndia);
 //LECTURE: Introduction to Objects
+// const myCountry = {
+//   country: country,
+//   capital: capitalIndia,
+//   language: language,
+//   continent: continent,
+//   population: populationIndia,
+//   neighbours: neighboursIndia,
+// };
+// console.log(myCountry);
+// LECTURE: Dot vs. Bracket Notation
+// console.log(
+//   `${myCountry.country} has
+//   ${myCountry.population}
+//   million people.It's official language is ${myCountry.language},
+//   ${[myCountry.neighbours.length]}
+//   neighbouring countries
+//   and a capital called ${myCountry.capital}.`
+// );
+
+// myCountry.population += 2;
+// myCountry["population"] -= 2;
+
+// console.log(myCountry.population);
+// console.log(myCountry);
+
+//LECTURE: Object Methods
 const myCountry = {
   country: country,
   capital: capitalIndia,
@@ -243,19 +269,19 @@ const myCountry = {
   continent: continent,
   population: populationIndia,
   neighbours: neighboursIndia,
+  describe: function () {
+    return console.log(
+      `${this.country} has ${
+        this.population
+      } million people.It's official language is ${this.language}, ${[
+        this.neighbours.length,
+      ]} neighbouring countries and a capital called ${this.capital}.`
+    );
+  },
 };
-console.log(myCountry);
-console.log(
-  `${myCountry.country} has 
-  ${myCountry.population} 
-  million people.It's official language is ${myCountry.language},
-  ${[myCountry.neighbours.length]}
-  neighbouring countries
-  and a capital called ${myCountry.capital}.`
-);
+myCountry.describe();
+// LECTURE:: Iteration: The for Loop
 
-myCountry.population += 2;
-myCountry["population"] -= 2;
-
-console.log(myCountry.population);
-console.log(myCountry);
+// for (let voterInCountry = 1; voterInCountry <= 50; voterInCountry++) {
+//   console.log(`Voter number ${voterInCountry} is currently voting.`);
+// }
