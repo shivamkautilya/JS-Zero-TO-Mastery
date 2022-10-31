@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic maths calculation function.</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      //functions for maths calculation
+      //Square function
+      function findSquare(num1) {
+        const squareOfNumber = num1 ** 2;
+        console.log(squareOfNumber);
+        return squareOfNumber;
+      }
+      // finding exponent/power of a number
+      function findExponent(num1, num2) {
+        const exponentOfNumber = Math.pow(num1, num2);
+        // console.log(exponentOfNumber);
+        return exponentOfNumber;
+      }
+
+      // const num1 = prompt("Enter Number to find square.");
+      let num1 = 4;
+      let num2 = 3;
+
+      findSquare(num1);
+      console.log(findExponent(2, 3));
+      // console.log(squareOfNumber);
+    </script>
+  </body>
+</html>
