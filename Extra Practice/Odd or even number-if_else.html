@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Is it odd or even.</title>
+  </head>
+  <body>
+    <script>
+      let enterNumber = 9;
+      let number = Number(enterNumber);
+      // console.log(typeof number, typeof enterNumber);
+      if (number % 2 === 0) {
+        console.log(`${number} is an even number.`);
+      } else if (number % 2 !== 0) {
+        console.log(`${number} is an odd number.`);
+      } else {
+        console.log(`${number} is not an valid integer.`);
+      }
+    </script>
+  </body>
+</html>

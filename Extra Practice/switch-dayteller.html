@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tell me today's day!</title>
+  </head>
+  <body>
+    <script>
+      let inputDay = "Sunday";
+      let day = inputDay.toLocaleLowerCase();
+      switch (day) {
+        case "sunday":
+          console.log("Yaa!!!Holiday time,it's Sunday.");
+          break;
+        case "monday":
+          console.log(`Today is ${day}.`);
+          break;
+        case "tuesday":
+          console.log(`Today is ${day}.`);
+          break;
+        case "wednesday":
+          console.log(`Today is ${day}.`);
+          break;
+        case "thursday":
+          console.log(`Today is ${day}.`);
+          break;
+        case "friday":
+          console.log(`Today is ${day}.`);
+          break;
+        case "saturday":
+          console.log("Worry not it's a weekend.Let's party on Saturday!!!");
+          break;
+        default:
+          console.log("Please enter coorect day.");
+          break;
+      }
+    </script>
+    <script>
+      //program which will tell if you are legal to drive.Age limit is 18 or above
+      const age = 90;
+      const isLegalToDrive =
+        age >= 18
+          ? "You can drive vehicle"
+          : "You are not allowed to drive vehicle.";
+      console.log(isLegalToDrive);
+    </script>
+  </body>
+</html>
