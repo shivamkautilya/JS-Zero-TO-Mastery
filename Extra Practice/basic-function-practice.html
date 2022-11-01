@@ -9,27 +9,43 @@
   <body>
     <script>
       "use strict";
-      //functions for maths calculation
-      //Square function
-      function findSquare(num1) {
-        const squareOfNumber = num1 ** 2;
-        console.log(squareOfNumber);
-        return squareOfNumber;
-      }
-      // finding exponent/power of a number
-      function findExponent(num1, num2) {
-        const exponentOfNumber = Math.pow(num1, num2);
-        // console.log(exponentOfNumber);
-        return exponentOfNumber;
-      }
+      /* //functions for maths calculation
+            //Square function
+            function findSquare(num1) {
+              const squareOfNumber = num1 ** 2;
+              console.log(squareOfNumber);
+              return squareOfNumber;
+            }
+            // finding exponent/power of a number
+            function findExponent(num1, num2) {
+              const exponentOfNumber = Math.pow(num1, num2);
+              // console.log(exponentOfNumber);
+              return exponentOfNumber;
+            }
 
-      // const num1 = prompt("Enter Number to find square.");
-      let num1 = 4;
-      let num2 = 3;
+            // const num1 = prompt("Enter Number to find square.");
+            let num1 = 4;
+            let num2 = 3;
 
-      findSquare(num1);
-      console.log(findExponent(2, 3));
-      // console.log(squareOfNumber);
+            findSquare(num1);
+            console.log(findExponent(2, 3));
+            // console.log(squareOfNumber);
+            */
+      //Lecture 36: Function calling other functions
+      //Question: Make myself statement by asking Name and birthYear.First function will calculate age then this function will be recalled in another function.
+      const calcAge = function (birthYear) {
+        //this is function expression
+        return 2022 - birthYear;
+      };
+      function myselfCreator(firstName, birthYear) {
+        let myselfStatement = `My name is ${firstName} and I am ${calcAge(
+          birthYear
+        )} years old.`;
+        return myselfStatement;
+      }
+      const firstName = "Shivam";
+      const birthYear = 2005;
+      console.log(myselfCreator(firstName, birthYear));
     </script>
   </body>
 </html>
