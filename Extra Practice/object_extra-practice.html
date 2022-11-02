@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects in JS</title>
+  </head>
+  <body>
+    <script>
+      //objects
+      const aboutShivam = {
+        firstName: "Shivam",
+        lastName: "Kautilya",
+        age: 16,
+        job: "Student",
+        address: "Lalpur,Ranchi",
+      };
+      console.log(aboutShivam);
+      //retrieve data from an object
+      let nameKey = "Name";
+      //there are two methods
+      console.log(aboutShivam.lastName); //dot notation
+      console.log(aboutShivam["age"]); //bracket notation
+
+      //advantage of bracket notation is that we can put expression inside it
+      console.log(
+        aboutShivam["first" + nameKey],
+        aboutShivam["last" + nameKey]
+      );
+    </script>
+  </body>
+</html>
