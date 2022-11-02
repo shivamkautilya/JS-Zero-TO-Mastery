@@ -15,6 +15,12 @@
         age: 16,
         job: "Student",
         address: "Lalpur,Ranchi",
+
+        //function using this keyword
+        myself: function () {
+          const createMyself = `My name is ${this.firstName} ${this.lastName},I am ${this.age} years old and I study in ${this.college}.`;
+          return createMyself;
+        },
       };
       console.log(aboutShivam);
       //retrieve data from an object
@@ -37,6 +43,7 @@
       console.log(
         `${aboutShivam["firstName"]} has ${aboutShivam.friends.length} friends and his bestfriend is ${aboutShivam.friends[0]}.`
       );
+      console.log(aboutShivam.myself());
     </script>
   </body>
 </html>
