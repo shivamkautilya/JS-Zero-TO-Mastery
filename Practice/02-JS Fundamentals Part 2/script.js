@@ -79,6 +79,13 @@ for (let rep = 1; rep <= 10; rep++) {
 */
 //Lecture 47: Looping Arrays, breaking and continuing
 const shivamArray = new Array("Shivam", "Kautilya", 2005, "Male", "Student");
+let typeOfShivamArray = [];
 for (let i = 0; i < shivamArray.length; i++) {
-  console.log(shivamArray[i]);
+  console.log(shivamArray[i], typeof shivamArray[i]);
+  //first method
+  // typeOfShivamArray[i] = typeof shivamArray[i];
+  //second method - Push Method
+  typeOfShivamArray.push(typeof shivamArray[i]);
 }
+
+console.log(typeOfShivamArray);
