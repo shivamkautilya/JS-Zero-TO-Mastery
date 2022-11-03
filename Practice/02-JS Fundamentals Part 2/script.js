@@ -69,3 +69,8 @@ console.log(
 
 //LECTURE: Object Methods
 console.log(jonas.getSummary());
+
+//Lecture 46: Iteration of the Loops
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weight repitition ${rep} 🏋🏻`);
+}
