@@ -1,3 +1,4 @@
+"use strict";
 //LECTURE: Introduction to Arrays
 
 const testBirthYear = new Array(2006, 2007, 2001, 1976, 1987);
@@ -70,7 +71,14 @@ console.log(
 //LECTURE: Object Methods
 console.log(jonas.getSummary());
 
-//Lecture 46: Iteration of the Loops
+/*
+/Lecture 46: Iteration of the Loops
 for (let rep = 1; rep <= 10; rep++) {
   console.log(`Lifting weight repitition ${rep} 🏋🏻`);
+}
+*/
+//Lecture 47: Looping Arrays, breaking and continuing
+const shivamArray = new Array("Shivam", "Kautilya", 2005, "Male", "Student");
+for (let i = 0; i < shivamArray.length; i++) {
+  console.log(shivamArray[i]);
 }
