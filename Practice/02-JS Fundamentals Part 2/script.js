@@ -89,6 +89,7 @@ for (let i = 0; i < shivamArray.length; i++) {
 }
 
 // console.log(typeOfShivamArray);
+/*
 //continue and break in loop
 console.log("--- Print strings only ---");
 for (let i = 0; i < shivamArray.length; i++) {
@@ -101,3 +102,14 @@ for (let i = 0; i < shivamArray.length; i++) {
   if (typeof shivamArray[i] === "number") break; //example of break in a loop
   console.log(shivamArray[i], typeof shivamArray[i]);
 }
+*/
+//Lecture 48: Looping Backwards and Loop inside loop
+console.log("--- Looping Backwards ---");
+const shivamArrayBackwards = [];
+for (let i = shivamArray.length - 1; i >= 0; i--) {
+  // console.log(i, shivamArray[i]);
+  //store this loop in const shivamArrayBackwards
+  shivamArrayBackwards.push(shivamArray[i]);
+}
+
+console.log(shivamArrayBackwards);
