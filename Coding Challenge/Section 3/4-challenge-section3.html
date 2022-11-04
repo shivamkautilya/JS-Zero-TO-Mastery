@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Challenge #4</title>
+  </head>
+  <body>
+    <script>
+      const calcTip = function (billAmount) {
+        return billAmount > 50 && billAmount < 300
+          ? billAmount * 0.15
+          : billAmount * 0.2;
+      };
+      bills = [100, 25, 60, 225, 890, 320, 980, 180, 230, 90];
+      tips = [];
+      total = [];
+      for (let i = 0; i < bills.length; i++) {
+        const tip = calcTip(bills[i]);
+        tips.push(tip);
+        total.push(bills[i] + tips[i]);
+        console.log(
+          `You bill is ${bills[i]}, tip amount is ${tips[i]} and total amount is ${total[i]}.`
+        );
+      }
+      // console.log(tips);
+      // console.log(bills, tips, total);
+    </script>
+  </body>
+</html>
