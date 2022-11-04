@@ -1,4 +1,5 @@
 "use strict";
+/*
 //LECTURE: Introduction to Arrays
 
 const testBirthYear = new Array(2006, 2007, 2001, 1976, 1987);
@@ -15,7 +16,7 @@ console.log(calculatedAge);
 console.log(`Length of Array is ${calculatedAge.length}.`);
 
 // LECTURE: Introduction to Objects
-/*var myDetails = {
+var myDetails = {
   //example of object
   firstName: "Shivam",
   lastName: "Kautilya",
@@ -23,7 +24,7 @@ console.log(`Length of Array is ${calculatedAge.length}.`);
   job: "Student",
   friends: ["Monu", "Rishabh", "Harsh", "Priiyanshu"],
 };
-*/
+
 //LECTURE: Dot vs. Bracket Notation
 const jonas = {
   firstName: "Jonas",
@@ -49,7 +50,6 @@ console.log(jonas["first" + nameKey]);
 console.log(jonas["last" + nameKey]);
 
 // console.log(jonas.'last' + nameKey)
-/*
 const interestedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends');
 
 if (jonas[interestedIn]) {
@@ -57,7 +57,6 @@ if (jonas[interestedIn]) {
 } else {
   console.log('Wrong request! Choose between firstName, lastName, age, job, and friends');
 }
-*/
 jonas.location = "Portugal";
 jonas["twitter"] = "@jonasschmedtman";
 console.log(jonas);
@@ -66,17 +65,15 @@ console.log(
   `${jonas.firstName} has ${[
     jonas.friends.length,
   ]} friends, and his bestfriend is ${[jonas.friends[0]]}.`
-);
-
-//LECTURE: Object Methods
-console.log(jonas.getSummary());
-
+  );
+  //LECTURE: Object Methods
+  console.log(jonas.getSummary());
+  */
 /*
 /Lecture 46: Iteration of the Loops
 for (let rep = 1; rep <= 10; rep++) {
   console.log(`Lifting weight repitition ${rep} 🏋🏻`);
 }
-*/
 //Lecture 47: Looping Arrays, breaking and continuing
 const shivamArray = new Array("Shivam", "Kautilya", 2005, "Male", "Student");
 let typeOfShivamArray = [];
@@ -87,7 +84,7 @@ for (let i = 0; i < shivamArray.length; i++) {
   //second method - Push Method
   typeOfShivamArray.push(typeof shivamArray[i]);
 }
-
+*/
 // console.log(typeOfShivamArray);
 /*
 //continue and break in loop
@@ -103,6 +100,7 @@ for (let i = 0; i < shivamArray.length; i++) {
   console.log(shivamArray[i], typeof shivamArray[i]);
 }
 */
+/*
 //Lecture 48: Looping Backwards and Loop inside loop
 console.log("--- Looping Backwards ---");
 const shivamArrayBackwards = [];
@@ -122,3 +120,4 @@ for (let exercise = 1; exercise <= 3; exercise++) {
     console.log(`Do push ups,push up repetition ${pushups}`);
   }
 }
+*/
