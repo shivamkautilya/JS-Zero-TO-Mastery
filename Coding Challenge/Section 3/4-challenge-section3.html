@@ -26,6 +26,25 @@
       }
       // console.log(tips);
       // console.log(bills, tips, total);
+      //Average in a array - calculate avg of array biils,tips and total
+      let sumBills = 0;
+      let sumTips = 0;
+      let sumTotal = 0;
+      let avgBills, avgTips, avgTotal;
+
+      for (let i = 0; i < bills.length; i++) {
+        sumBills += bills[i];
+        sumTips += tips[i];
+        sumTotal += total[i];
+        avgBills = sumBills / bills.length;
+        avgTips = sumTips / tips.length;
+        avgTotal = sumTotal / total.length;
+      }
+      // console.log(sumBills, sumTips, sumTotal);
+      console.log("--- AVERAGE ---");
+      console.log(
+        `Average bills,tips and total are ${avgBills},${avgTips} and ${avgTotal} respectively.`
+      );
     </script>
   </body>
 </html>
