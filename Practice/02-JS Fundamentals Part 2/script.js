@@ -88,4 +88,16 @@ for (let i = 0; i < shivamArray.length; i++) {
   typeOfShivamArray.push(typeof shivamArray[i]);
 }
 
-console.log(typeOfShivamArray);
+// console.log(typeOfShivamArray);
+//continue and break in loop
+console.log("--- Print strings only ---");
+for (let i = 0; i < shivamArray.length; i++) {
+  if (typeof shivamArray[i] !== "string") continue; //example of continue in a loop
+  console.log(shivamArray[i], typeof shivamArray[i]);
+}
+
+console.log("--- Break loop if number found ---");
+for (let i = 0; i < shivamArray.length; i++) {
+  if (typeof shivamArray[i] === "number") break; //example of break in a loop
+  console.log(shivamArray[i], typeof shivamArray[i]);
+}
