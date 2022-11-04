@@ -113,3 +113,12 @@ for (let i = shivamArray.length - 1; i >= 0; i--) {
 }
 
 console.log(shivamArrayBackwards);
+
+//loop inside a loop
+//We will do 3 times exercise with repetition of 5 pushups each time
+for (let exercise = 1; exercise <= 3; exercise++) {
+  console.log(`--- Exercise repetition ${exercise} ---`);
+  for (let pushups = 1; pushups <= 5; pushups++) {
+    console.log(`Do push ups,push up repetition ${pushups}`);
+  }
+}
