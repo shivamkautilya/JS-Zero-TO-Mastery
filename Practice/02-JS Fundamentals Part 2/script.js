@@ -121,3 +121,12 @@ for (let exercise = 1; exercise <= 3; exercise++) {
   }
 }
 */
+// Lecture 49: The While Loop
+let dice = Math.trunc(Math.random() * 6) + 1;
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1; //regenerate new random dice
+  if (dice === 6) {
+    console.log(`Wohhoooo you rolled a ${dice}!!!`);
+  }
+}
