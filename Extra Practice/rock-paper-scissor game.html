@@ -14,7 +14,7 @@
       let options = Math.trunc(Math.random() * computerChoice.length); //not added 1 bcz array starts from .
       computerChoice = computerChoice[options];
       // console.log(computerChoice, options);
-      if (userChoice === "rock") {
+      if (userChoice === "rock" || "r") {
         console.log(
           `You chose ${userChoice} and computer chose ${computerChoice}.`
         );
@@ -27,7 +27,7 @@
         } else {
           console.log("Unknown Error");
         }
-      } else if (userChoice === "paper") {
+      } else if (userChoice === "paper" || "p") {
         console.log(
           `You chose ${userChoice} and computer chose ${computerChoice}.`
         );
@@ -40,7 +40,7 @@
         } else {
           console.log("Unknown Error");
         }
-      } else if (userChoice === "scissor") {
+      } else if (userChoice === "scissor" || "s") {
         console.log(
           `You chose ${userChoice} and computer chose ${computerChoice}.`
         );
