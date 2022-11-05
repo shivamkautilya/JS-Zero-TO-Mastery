@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissor Game</title>
+  </head>
+  <body>
+    <script>
+      let userChoice = prompt("Choose between Rock,Paper and Scissor");
+      userChoice = userChoice.toLowerCase();
+      let computerChoice = ["rock", "paper", "scissor"];
+      let options = Math.trunc(Math.random() * computerChoice.length); //not added 1 bcz array starts from .
+      computerChoice = computerChoice[options];
+      // console.log(computerChoice, options);
+      if (userChoice === "rock") {
+        console.log(
+          `You chose ${userChoice} and computer chose ${computerChoice}.`
+        );
+        if (computerChoice === "rock") {
+          console.log("It's a tie!!");
+        } else if (computerChoice === "paper") {
+          console.log("Computer won,You lost 🥲");
+        } else if (computerChoice === "scissor") {
+          console.log("Wohhooo!!! You Won!!");
+        } else {
+          console.log("Unknown Error");
+        }
+      } else if (userChoice === "paper") {
+        console.log(
+          `You chose ${userChoice} and computer chose ${computerChoice}.`
+        );
+        if (computerChoice === "rock") {
+          console.log("Wohhoo!!! You won!!");
+        } else if (computerChoice === "paper") {
+          console.log("It's a tie!!");
+        } else if (computerChoice === "scissor") {
+          console.log("Computer won,You lost 🥲");
+        } else {
+          console.log("Unknown Error");
+        }
+      } else if (userChoice === "scissor") {
+        console.log(
+          `You chose ${userChoice} and computer chose ${computerChoice}.`
+        );
+        if (computerChoice === "rock") {
+          console.log("Computer won,You lost 🥲");
+        } else if (computerChoice === "paper") {
+          console.log("Wohhoo!!! You won!!");
+        } else if (computerChoice === "scissor") {
+          console.log("It's a tie!!");
+        } else {
+          console.log("Unknown Error");
+        }
+      }
+    </script>
+  </body>
+</html>
