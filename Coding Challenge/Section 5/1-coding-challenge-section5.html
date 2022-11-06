@@ -10,11 +10,11 @@
     <script>
       //function to print out temperatures
       function printForecast(arr) {
+        let str = "";
         for (let i = 0; i < arr.length; i++) {
-          let str = "";
-          str = str + `${arr[i]} degree C in ${i + 1} days...`;
-          console.log(`... ` + str);
+          str = str + `${arr[i]}° C in ${i + 1} days...`;
         }
+        console.log(`... ` + str);
       }
       //
       const data1 = [17, 21, 23];
@@ -26,6 +26,8 @@
       //   // `${data1[0]} in 1 days ... ${data1[1]} in 2 days ... ${data1[2]} in 1 days ... `
       //   ();
       printForecast(data1);
+      console.log("--- Data 2 starts here ---");
+      printForecast(data2);
     </script>
   </body>
 </html>
