@@ -300,6 +300,7 @@ for (let i = 0; i < populations.length; i++) {
 }
 console.log(percentages2);
 */
+/*
 // LECTURE: Looping Backwards and Loops in Loops
 console.log("// LECTURE: Looping Backwards and Loops in Loops");
 let listOfNeighbours = [
@@ -314,3 +315,16 @@ for (let i = 0; i < listOfNeighbours.length; i++) {
     console.log(`Neighbours: ${listOfNeighbours[i][o]}`);
   }
 }
+*/
+//LECTURE: The while loop
+console.log("LECTURE: The while loop");
+function percentageOfWorld1(population) {
+  return (population / worldPopulation) * 100;
+}
+let percentage3 = [];
+let i = 0;
+while (i < populations.length) {
+  percentage3[i] = percentageOfWorld1(populations[i]);
+  i++;
+}
+console.log(`Percenteage of countries using while loop are ${percentage3}.`);
