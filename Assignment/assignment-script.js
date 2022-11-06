@@ -285,3 +285,17 @@ myCountry.describe();
 // for (let voterInCountry = 1; voterInCountry <= 50; voterInCountry++) {
 //   console.log(`Voter number ${voterInCountry} is currently voting.`);
 // }
+
+// LECTURE: Looping Arrays, Breaking and Continuing
+console.log("LECTURE: Looping Arrays, Breaking and Continuing");
+console.log(populations);
+
+function percentageOfWorld1(population) {
+  return (population / worldPopulation) * 100;
+}
+// console.log(percentageOfWorld1(populations[3]));
+let percentages2 = [];
+for (let i = 0; i < populations.length; i++) {
+  percentages2[i] = percentageOfWorld1(populations[i]);
+}
+console.log(percentages2);
