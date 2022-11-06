@@ -285,7 +285,7 @@ myCountry.describe();
 // for (let voterInCountry = 1; voterInCountry <= 50; voterInCountry++) {
 //   console.log(`Voter number ${voterInCountry} is currently voting.`);
 // }
-
+/*
 // LECTURE: Looping Arrays, Breaking and Continuing
 console.log("LECTURE: Looping Arrays, Breaking and Continuing");
 console.log(populations);
@@ -299,3 +299,18 @@ for (let i = 0; i < populations.length; i++) {
   percentages2[i] = percentageOfWorld1(populations[i]);
 }
 console.log(percentages2);
+*/
+// LECTURE: Looping Backwards and Loops in Loops
+console.log("// LECTURE: Looping Backwards and Loops in Loops");
+let listOfNeighbours = [
+  ["Canada", "Mexico"],
+  ["Spain"],
+  ["Norway", "Sweden", "Russia"],
+];
+
+console.log(listOfNeighbours.length, listOfNeighbours);
+for (let i = 0; i < listOfNeighbours.length; i++) {
+  for (let o = 0; o < listOfNeighbours[i].length; o++) {
+    console.log(`Neighbours: ${listOfNeighbours[i][o]}`);
+  }
+}
