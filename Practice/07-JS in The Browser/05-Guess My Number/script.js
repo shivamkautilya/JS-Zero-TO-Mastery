@@ -1,4 +1,6 @@
 "use strict";
+/*
+// LECTURE 71 AND 72
 console.log(document.querySelector(".message").textContent);
 document.querySelector(".message").textContent = " Correct Number !!";
 
@@ -13,3 +15,13 @@ console.log(
 );
 
 console.log(document.querySelector(".guess").value);
+*/
+
+//LECTURE 73: HANDLING CLICK EVENTS
+const clickCheck = function () {
+  let guessInput = document.querySelector(".guess").value;
+  // guessInput = parseInt(guessInput);
+  console.log(guessInput);
+  // document.querySelector(".message").textContent = "Correct Number";
+};
+document.querySelector(".check").addEventListener("click", clickCheck);
