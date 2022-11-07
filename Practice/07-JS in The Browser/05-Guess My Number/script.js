@@ -18,16 +18,12 @@ console.log(document.querySelector(".guess").value);
 */
 
 //LECTURE 73: HANDLING CLICK EVENTS
-//functions
-const numberGenerator = function () {
-  return Math.trunc(Math.random() * 20) + 1;
-};
-
 const clickCheck = function () {
-  guessInput = document.querySelector(".guess").value;
-  guessInput = parseInt(guessInput);
-  console.log("User guessed number = ", guessInput, typeof guessInput);
+  let guessInput = document.querySelector(".guess").value;
+  // guessInput = parseInt(guessInput);
+  console.log(guessInput);
   // document.querySelector(".message").textContent = "Correct Number";
+<<<<<<< HEAD
   if (guessInput !== computerGuess) {
     // console.log("if statement executed");
     userScore = userScore - 1;
@@ -60,5 +56,7 @@ let guessInput = 0;
 // console.log("Correct Answer = ", computerGuess);
 //Store input of check class
 
+=======
+};
+>>>>>>> parent of 7c27b9e... Create Game: Still Under Development.. PS-check description for details. Following Things are completed: 1) Create Function to generate random number by computer. 2) Create Function which stores User Input Number 3) If Else statement to decide whether guess is correct. 4) Dynamic changement in Score,High Score,'Start guessing' changes to correct number if correct. 5)Correct User Guess shows in .number
 document.querySelector(".check").addEventListener("click", clickCheck);
-//Define Logic to verify user guess is === computerGuess
