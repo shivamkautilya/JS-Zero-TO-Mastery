@@ -18,16 +18,10 @@ console.log(document.querySelector(".guess").value);
 */
 
 //LECTURE 73: HANDLING CLICK EVENTS
-//functions
-const numberGenerator = function () {
-  return Math.trunc(Math.random() * 20) + 1;
-};
-
 const clickCheck = function () {
-  guessInput = document.querySelector(".guess").value;
-  guessInput = parseInt(guessInput);
-  console.log("User guessed number = ", guessInput, typeof guessInput);
+  let guessInput = document.querySelector(".guess").value;
+  // guessInput = parseInt(guessInput);
+  console.log(guessInput);
   // document.querySelector(".message").textContent = "Correct Number";
 };
 document.querySelector(".check").addEventListener("click", clickCheck);
-//Define Logic to verify user guess is === computerGuess
