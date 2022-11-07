@@ -33,10 +33,20 @@ const clickCheck = function () {
     userScore = userScore - 1;
     document.querySelector(".score").textContent = userScore;
     console.log("User Score = ", userScore);
+    if (guessInput < computerGuess) {
+      document.querySelector(".message").textContent =
+        "Too low!!! Guess higher number.";
+    } else if (guessInput > computerGuess) {
+      document.querySelector(".message").textContent =
+        "Too high!!! Guess lower number.";
+    } else {
+      console.log("Unknown Error!!");
+    }
   } else if (guessInput === computerGuess) {
-    document.querySelector(".message").textContent = "🎉 Correct Number!!!!";
+    document.querySelector(".message").textContent = "🎉 Correct Answer!!!!";
     document.querySelector(".highscore").textContent = userScore;
     document.querySelector(".number").textContent = guessInput;
+    document.body.style.backgroundColor = "#19a447";
     console.log("Correct Guess!!!", "User Score = ", userScore);
   } else {
     console.log("Unknown Error");
