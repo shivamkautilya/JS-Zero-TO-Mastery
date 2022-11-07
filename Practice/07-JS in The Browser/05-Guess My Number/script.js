@@ -18,10 +18,37 @@ console.log(document.querySelector(".guess").value);
 */
 
 //LECTURE 73: HANDLING CLICK EVENTS
-const clickCheck = function () {
-  let guessInput = document.querySelector(".guess").value;
-  // guessInput = parseInt(guessInput);
-  console.log(guessInput);
-  // document.querySelector(".message").textContent = "Correct Number";
+//functions
+const numberGenerator = function () {
+  return Math.trunc(Math.random() * 20) + 1;
 };
+
+const clickCheck = function () {
+  guessInput = document.querySelector(".guess").value;
+  guessInput = parseInt(guessInput);
+  console.log("User guessed number = ", guessInput, typeof guessInput);
+  // document.querySelector(".message").textContent = "Correct Number";
+  if (guessInput !== computerGuess) {
+    // console.log("if statement executed");
+    userScore = userScore - 1;
+    document.querySelector(".score").textContent = userScore;
+    console.log("User Score = ", userScore);
+  } else if (guessInput === computerGuess) {
+    document.querySelector(".message").textContent = "🎉 Correct Number!!!!";
+    document.querySelector(".highscore").textContent = userScore;
+    document.querySelector(".number").textContent = guessInput;
+    console.log("Correct Guess!!!", "User Score = ", userScore);
+  } else {
+    console.log("Unknown Error");
+  }
+};
+//
+const computerGuess = numberGenerator();
+let userScore = document.querySelector(".score").textContent;
+userScore = Number.parseInt(userScore);
+let guessInput = 0;
+console.log("Correct Answer = ", computerGuess);
+//Store input of check class
+
 document.querySelector(".check").addEventListener("click", clickCheck);
+//Define Logic to verify user guess is === computerGuess
