@@ -23,6 +23,7 @@ let numberGenerator = function () {
 function clickAgain() {
   numberGenerator();
   computerGuess = numberGenerator();
+  userScore = 20;
   console.log("Correct Answer = ", computerGuess);
   document.body.style.backgroundColor = "#222";
   document.querySelector(".message").textContent = "Start Guessing...";
@@ -66,10 +67,14 @@ const clickCheck = function () {
     }
   } else if (guessInput === computerGuess) {
     document.querySelector(".message").textContent = "🎉 Correct Answer!!!!";
-    document.querySelector(".highscore").textContent = userScore;
+    // document.querySelector(".highscore").textContent = userScore;
     document.querySelector(".number").textContent = guessInput;
     document.body.style.backgroundColor = "#19a447";
     console.log("Correct Guess!!!", "User Score = ", userScore);
+    if (userScore > highScore) {
+      highScore = userScore;
+      document.querySelector(".highscore").textContent = highScore;
+    }
   } else {
     console.log("Unknown Error");
   }
