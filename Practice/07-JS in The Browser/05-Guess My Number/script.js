@@ -16,16 +16,28 @@ console.log(document.querySelector(".guess").value);
 
 //LECTURE 73: HANDLING CLICK EVENTS
 //functions
-const numberGenerator = function () {
+let numberGenerator = function () {
   return Math.trunc(Math.random() * 20) + 1;
 };
-
+//function for again button
+function clickAgain() {
+  numberGenerator();
+  computerGuess = numberGenerator();
+  console.log("Correct Answer = ", computerGuess);
+  document.body.style.backgroundColor = "#222";
+  document.querySelector(".message").textContent = "Start Guessing...";
+  document.querySelector(".score").textContent = 20;
+  document.querySelector(".score").value = 20;
+  document.querySelector(".number").textContent = "?";
+  document.querySelector(".guess").value = 0;
+}
+//funtion for game logic
 const clickCheck = function () {
   guessInput = document.querySelector(".guess").value;
   guessInput = parseInt(guessInput);
   console.log("User guessed number = ", guessInput, typeof guessInput);
   // document.querySelector(".message").textContent = "Correct Number";
-  if (guessInput > 20) {
+  if (guessInput > 20 || guessInput === 0) {
     document.querySelector(".message").textContent =
       "Guess number between 1-20";
     console.log("Guess number between 1-20");
@@ -63,11 +75,13 @@ const clickCheck = function () {
   }
 };
 //
-const computerGuess = numberGenerator();
+let computerGuess = numberGenerator();
 let userScore = document.querySelector(".score").textContent;
 userScore = Number.parseInt(userScore);
 let guessInput = 0;
+let highScore = 0;
 console.log("Correct Answer = ", computerGuess);
 //Store input of check class
 document.querySelector(".check").addEventListener("click", clickCheck);
-//Define Logic to verify user guess is === computerGuess
+//add functionality in again button
+document.querySelector(".again").addEventListener("click", clickAgain);
