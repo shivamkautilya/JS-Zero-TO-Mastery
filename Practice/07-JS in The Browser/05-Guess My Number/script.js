@@ -25,19 +25,32 @@ const clickCheck = function () {
   guessInput = parseInt(guessInput);
   console.log("User guessed number = ", guessInput, typeof guessInput);
   // document.querySelector(".message").textContent = "Correct Number";
-  if (guessInput !== computerGuess) {
+  if (guessInput > 20) {
+    document.querySelector(".message").textContent =
+      "Guess number between 1-20";
+    console.log("Guess number between 1-20");
+  } else if (guessInput !== computerGuess) {
     // console.log("if statement executed");
-    userScore = userScore - 1;
-    document.querySelector(".score").textContent = userScore;
-    console.log("User Score = ", userScore);
-    if (guessInput < computerGuess) {
-      document.querySelector(".message").textContent =
-        "Too low!!! Guess higher number.";
-    } else if (guessInput > computerGuess) {
-      document.querySelector(".message").textContent =
-        "Too high!!! Guess lower number.";
-    } else {
-      console.log("Unknown Error!!");
+    if (userScore === 1) {
+      document.body.style.backgroundColor = "#d30f0f";
+      document.querySelector(".message").textContent = "You Lost 🥲";
+      document.querySelector(".score").textContent = 0;
+    } else if (userScore > 1) {
+      userScore--;
+      document.querySelector(".score").textContent = userScore;
+      console.log("User Score = ", userScore);
+      if (guessInput < computerGuess) {
+        document.querySelector(".message").textContent =
+          "Too low!!! Guess higher number.";
+      } else if (guessInput > computerGuess) {
+        document.querySelector(".message").textContent =
+          "Too high!!! Guess lower number.";
+      } else if (!guessInput) {
+        document.querySelector(".message").textContent =
+          "Please enter valid Number!";
+      } else {
+        console.log("Unknown Error!!");
+      }
     }
   } else if (guessInput === computerGuess) {
     document.querySelector(".message").textContent = "🎉 Correct Answer!!!!";
@@ -54,8 +67,7 @@ const computerGuess = numberGenerator();
 let userScore = document.querySelector(".score").textContent;
 userScore = Number.parseInt(userScore);
 let guessInput = 0;
-// console.log("Correct Answer = ", computerGuess);
+console.log("Correct Answer = ", computerGuess);
 //Store input of check class
-
 document.querySelector(".check").addEventListener("click", clickCheck);
 //Define Logic to verify user guess is === computerGuess
