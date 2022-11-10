@@ -11,6 +11,8 @@ const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
 let currentScore = 0;
 let activePlayer = 0;
+let notActivePlayer = 1;
+
 let scores = [0, 0];
 
 //FUNCTIONS
@@ -32,6 +34,13 @@ const rollDice = function () {
     document.getElementById(`current--${activePlayer}`).textContent = 0;
     currentScore = 0;
     activePlayer = activePlayer === 0 ? 1 : 0;
+    notActivePlayer = notActivePlayer === 1 ? 0 : 1;
+    document
+      .querySelector(`.player--${activePlayer}`)
+      .classList.add("player--active");
+    document
+      .querySelector(`.player--${notActivePlayer}`)
+      .classList.remove("player--active");
   }
 };
 
