@@ -10,6 +10,8 @@ const btnNew = document.querySelector(".btn--new");
 const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
 let currentScore = 0;
+let activePlayer = 0;
+let scores = [0, 0];
 
 //FUNCTIONS
 const rollDice = function () {
@@ -22,7 +24,14 @@ const rollDice = function () {
 
   //3. Show and add current score if dice != 1
   if (diceNumber != 1) {
-    currentScore0El.textContent = diceNumber;
+    currentScore += diceNumber;
+    // currentScore0El.textContent = currentScore;
+    document.getElementById(`current--${activePlayer}`).textContent =
+      currentScore;
+  } else {
+    document.getElementById(`current--${activePlayer}`).textContent = 0;
+    currentScore = 0;
+    activePlayer = activePlayer === 0 ? 1 : 0;
   }
 };
 
