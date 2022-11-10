@@ -50,6 +50,8 @@ const newGame = function () {
   currentScore0El.textContent = 0;
   currentScore1El.textContent = 0;
   diceClassEl.classList.add("hidden");
+  document.querySelector(".player--0").classList.add("player--active");
+  document.querySelector(".player--1").classList.remove("player--active");
 };
 
 //setting default values to 0
