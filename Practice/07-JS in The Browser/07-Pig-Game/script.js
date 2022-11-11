@@ -16,6 +16,20 @@ let notActivePlayer = 1;
 let scores = [0, 0];
 
 //FUNCTIONS
+//function to switch player
+const switchPlayer = function () {
+  document.getElementById(`current--${activePlayer}`).textContent = 0;
+  currentScore = 0;
+  diceClassEl.classList.add("hidden");
+  activePlayer = activePlayer === 0 ? 1 : 0;
+  notActivePlayer = notActivePlayer === 1 ? 0 : 1;
+  document
+    .querySelector(`.player--${activePlayer}`)
+    .classList.add("player--active");
+  document
+    .querySelector(`.player--${notActivePlayer}`)
+    .classList.remove("player--active");
+};
 const rollDice = function () {
   //1. Generate dice number between 1-6
   const diceNumber = Math.trunc(Math.random() * 6) + 1;
@@ -31,17 +45,24 @@ const rollDice = function () {
     document.getElementById(`current--${activePlayer}`).textContent =
       currentScore;
   } else {
-    document.getElementById(`current--${activePlayer}`).textContent = 0;
-    currentScore = 0;
-    activePlayer = activePlayer === 0 ? 1 : 0;
-    notActivePlayer = notActivePlayer === 1 ? 0 : 1;
-    document
-      .querySelector(`.player--${activePlayer}`)
-      .classList.add("player--active");
-    document
-      .querySelector(`.player--${notActivePlayer}`)
-      .classList.remove("player--active");
+    switchPlayer();
   }
+};
+
+const btnHoldFunction = function () {
+  console.log("Hold button clicked");
+  //1 Store currentscore into respected Player Score
+  //verify if score = 100
+  if (activePlayer == 0) {
+    scores[0] += currentScore;
+    document.getElementById(`score--${activePlayer}`).textContent = scores[0];
+    switchPlayer();
+  } else if (activePlayer == 1) {
+    scores[1] += currentScore;
+    document.getElementById(`score--${activePlayer}`).textContent = scores[1];
+    switchPlayer();
+  }
+  //2 Switch to Next Player
 };
 
 const newGame = function () {
@@ -53,7 +74,6 @@ const newGame = function () {
   document.querySelector(".player--0").classList.add("player--active");
   document.querySelector(".player--1").classList.remove("player--active");
 };
-
 //setting default values to 0
 score0El.textContent = 0;
 score1El.textContent = 0;
@@ -67,4 +87,4 @@ diceClassEl.classList.add("hidden");
 // }
 btnRoll.addEventListener("click", rollDice);
 btnNew.addEventListener("click", newGame);
-// btnHold.addEventListener("click");
+btnHold.addEventListener("click", btnHoldFunction);
