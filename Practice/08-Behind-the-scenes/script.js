@@ -1,5 +1,5 @@
 "use strict";
-
+/*
 function ageCalculator(birthYear) {
   if (birthYear < currentYear && birthYear > 1900) {
     const myName = firstName;
@@ -34,3 +34,9 @@ const person = {
 };
 
 console.log(createFullName.fullName.call(person));
+*/
+// Lecture 100: Primitive vs Reference Values
+let lastName = "Mehta";
+let oldLastName = lastName;
+lastName = "Kautilya";
+console.log(lastName, oldLastName);
