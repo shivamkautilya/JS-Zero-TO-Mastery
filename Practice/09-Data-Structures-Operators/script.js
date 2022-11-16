@@ -9,8 +9,8 @@ const restaurant = {
   name: "Classico Italiano",
   location: "Via Angelo Tavanti 23, Firenze, Italy",
   categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
-  starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
-  mainMenu: ["Pizza", "Pasta", "Risotto"],
+  starterMenu: ["Chowmein", "Paneer Chilli", "Chicken 65", "Salad"],
+  mainMenu: ["Pizza", "Pasta", "Dosa"],
 
   order: function (starterOrder, mainOrder) {
     return [this.starterMenu[starterOrder], this.mainMenu[mainOrder]];
@@ -29,9 +29,44 @@ const restaurant = {
       close: 24,
     },
   },
+  // creating function to destructure objects
+  orderDelivery: function ({ starterOrder, mainOrder, address, time }) {
+    return console.log(
+      `Wohhooo!! Your Order is received.\n${this.starterMenu[starterOrder]} and ${this.mainMenu[mainOrder]} will be delivered at ${address} at ${time}.`
+    );
+  },
 };
+//Lecture 104: Destructuring Objects
+const order1 = restaurant.orderDelivery({
+  starterOrder: 1,
+  mainOrder: 2,
+  address: "Lalpur,Ranchi",
+  time: "21:00",
+});
 
-// Destructuring arrays
+const { name: restaurantName = "Unable to fetch;\n", openingHours } =
+  restaurant;
+console.log(
+  "Restaurant Name: ",
+  restaurantName,
+  "\nOpening Time: ",
+  openingHours
+);
+//changing name of object while destructuring objects
+let { starterMenu: starters, mainMenu: mainCourse } = restaurant;
+console.log(starters, mainCourse);
+//mutating variables in objects
+let aa = 100;
+let cc = 300;
+const randomObj = {
+  aa: 1,
+  bb: 2,
+  cc: 3,
+};
+({ aa, cc } = randomObj);
+console.log(aa, cc);
+
+// Lecture 103: Destructuring arrays
 // let [main, , secondary] = restaurant.categories;
 // console.log(main, secondary);
 // //switching variables
