@@ -38,6 +38,17 @@ const restaurant = {
 // [main, secondary] = [secondary, main];
 // console.log(main, secondary);
 
-console.log(restaurant.order(2, 1));
-let [starter, mainCourse] = restaurant.order(2, 0);
-console.log(starter, mainCourse);
+// console.log(restaurant.order(2, 1));
+// let [starter, mainCourse] = restaurant.order(2, 0);
+// console.log(starter, mainCourse);
+
+//nested array destructuring
+const nestedArray = [1, 2, 3, [4, 5, 6]];
+// console.log(nestedArray);
+
+const [a, , b, [, c, d]] = nestedArray;
+console.log(a, b, c, d); //output = 1,3,5,6
+
+//using default values if input is lower than expected values of array
+const [p, q, r = "No input"] = [2, 5];
+console.log(p, q, r);
