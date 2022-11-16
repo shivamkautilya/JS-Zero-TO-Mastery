@@ -1,8 +1,8 @@
 "use strict";
 
-// Data needed for a later exercise
+// Data needed for a later efirstercise
 const flights =
-  "_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30";
+  "_Delayed_Departure;fao93766109;tfirstl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30";
 
 // Data needed for first part of the section
 const restaurant = {
@@ -12,6 +12,9 @@ const restaurant = {
   starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
   mainMenu: ["Pizza", "Pasta", "Risotto"],
 
+  order: function (starterOrder, mainOrder) {
+    return [this.starterMenu[starterOrder], this.mainMenu[mainOrder]];
+  },
   openingHours: {
     thu: {
       open: 12,
@@ -27,3 +30,14 @@ const restaurant = {
     },
   },
 };
+
+// Destructuring arrays
+// let [main, , secondary] = restaurant.categories;
+// console.log(main, secondary);
+// //switching variables
+// [main, secondary] = [secondary, main];
+// console.log(main, secondary);
+
+console.log(restaurant.order(2, 1));
+let [starter, mainCourse] = restaurant.order(2, 0);
+console.log(starter, mainCourse);
