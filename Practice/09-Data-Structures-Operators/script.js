@@ -36,6 +36,29 @@ const restaurant = {
     );
   },
 };
+//Lecture 105: The Spread Operator
+//make shallow copy of arrays
+let mainMenuCopy = [...restaurant.mainMenu];
+// console.log(mainMenuCopy, restaurant.mainMenu);
+//adding values inside array
+let array = [3, 4, 5, 6];
+console.log(array);
+array = [1, 2, ...array];
+console.log(array);
+restaurant.mainMenu = [
+  ...restaurant.mainMenu,
+  "Panner Butter Masala",
+  "Chicken Kadhai",
+];
+console.log(mainMenuCopy, restaurant.mainMenu);
+//convert string into letter by letter
+const nameMine = "Shivam";
+const spellNameMine = [...nameMine];
+console.log(...nameMine);
+//joining 2 arrays
+const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(menu);
+/*
 //Lecture 104: Destructuring Objects
 const order1 = restaurant.orderDelivery({
   starterOrder: 1,
@@ -65,7 +88,8 @@ const randomObj = {
 };
 ({ aa, cc } = randomObj);
 console.log(aa, cc);
-
+*/
+/*
 // Lecture 103: Destructuring arrays
 // let [main, , secondary] = restaurant.categories;
 // console.log(main, secondary);
@@ -87,3 +111,4 @@ console.log(a, b, c, d); //output = 1,3,5,6
 //using default values if input is lower than expected values of array
 const [p, q, r = "No input"] = [2, 5];
 console.log(p, q, r);
+*/
