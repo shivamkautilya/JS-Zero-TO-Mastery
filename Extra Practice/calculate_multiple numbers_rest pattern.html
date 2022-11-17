@@ -4,24 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add,Subtract,Multiply multiple given numbers.</title>
+    <title>Add,Subtract,Multiply multiple given numbersAdd.</title>
   </head>
   <body>
     <script>
       //functions
       //add number
-      function add(...numbers) {
-        console.log(numbers, numbers.length);
+      function add(...numbersAdd) {
+        console.log(numbersAdd, numbersAdd.length);
         let sum = 0;
-        for (let i = 0; i < numbers.length; i++) {
-          sum += numbers[i];
-        }
+        for (let i = 0; i < numbersAdd.length; i++) sum += numbersAdd[i];
         return console.log(sum);
       }
-      // subtraction
+      //multiplication
+      function multiply(...numbersMultiply) {
+        let multiplyAnswer = 1;
+        for (let i = 0; i < numbersMultiply.length; i++)
+          multiplyAnswer *= numbersMultiply[i];
+        return console.log(multiplyAnswer);
+      }
 
       //functions end here
       add(2, 3, 8, 9, 8, 8, 9, 0, 3, 8, -2);
+      multiply(4, 2, 2, 10);
     </script>
   </body>
 </html>
