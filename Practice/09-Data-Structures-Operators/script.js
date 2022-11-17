@@ -37,6 +37,8 @@ const restaurant = {
   },
 };
 //Lecture 105: The Spread Operator
+//Note: All Iterables can use Spread Operator.NOT OBJECT till ES2017
+// from ES2018 we can use for objects also.
 //make shallow copy of arrays
 let mainMenuCopy = [...restaurant.mainMenu];
 // console.log(mainMenuCopy, restaurant.mainMenu);
@@ -58,6 +60,16 @@ console.log(...nameMine);
 //joining 2 arrays
 const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
 console.log(menu);
+// OBJECTS  (Use less bcz ES2018 and Above required.)
+//make shallow copy of object
+let restaurantCopy = { ...restaurant }; //smarter way to copy objects but ES2018+ required
+restaurantCopy.name = "Videshi Zaika";
+restaurantCopy = {
+  foundedIn: "2009",
+  founder: "Shivam Kautilya",
+  ...restaurant,
+};
+console.log(restaurantCopy, restaurant);
 /*
 //Lecture 104: Destructuring Objects
 const order1 = restaurant.orderDelivery({
