@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto Capitalise Given Name</title>
+  </head>
+  <body>
+    <script>
+      let firstName = "SHIvaM";
+      let lastName = "kauTILya";
+      // console.log(firstName, lastName);
+      const firstNameUpperCase = [...firstName.toLocaleUpperCase()];
+      const lastNameUpperCase = [...lastName.toLocaleUpperCase()];
+      const firstNameLowerCase = [...firstName.toLocaleLowerCase()];
+      const lastNameLowerCase = [...lastName.toLocaleLowerCase()];
+      // console.log(
+      //   firstNameUpperCase,
+      //   lastNameUpperCase,
+      //   firstNameLowerCase,
+      //   lastNameLowerCase
+      // );
+      console.log(
+        `Total Letters in your name is ${
+          firstNameUpperCase.length + lastNameUpperCase.length
+        }.`
+      );
+      //Auto Capitalising in action
+      firstNameLowerCase.shift();
+      lastNameLowerCase.shift();
+      firstName = `${firstNameUpperCase[0] + firstNameLowerCase.join("")}`;
+      lastName = `${lastNameUpperCase[0] + lastNameLowerCase.join("")}`;
+      console.log(`Your name is ${firstName} ${lastName}.`);
+    </script>
+  </body>
+</html>
