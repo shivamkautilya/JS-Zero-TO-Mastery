@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soccer Game</title>
+  </head>
+  <body>
+    <script>
+      const game = {
+        team1: "Bayern Munich",
+        team2: "Borrussia Dortmund",
+        players: [
+          [
+            "Neuer",
+            "Pavard",
+            "Martinez",
+            "Alaba",
+            "Davies",
+            "Kimmich",
+            "Goretzka",
+            "Coman",
+            "Muller",
+            "Gnarby",
+            "Lewandowski",
+          ],
+          [
+            "Burki",
+            "Schulz",
+            "Hummels",
+            "Akanji",
+            "Hakimi",
+            "Weigl",
+            "Witsel",
+            "Hazard",
+            "Brandt",
+            "Sancho",
+            "Gotze",
+          ],
+        ],
+        score: "4:0",
+        scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
+        date: "Nov 9th, 2037",
+        odds: {
+          team1: 1.33,
+          x: 3.25,
+          team2: 6.5,
+        },
+      };
+
+      //TASK 1
+      const [player1, player2] = game.players;
+      // console.log(player1, player2);
+      //TASK 2
+      const [gk, ...fieldPlayers] = game.players[0];
+      console.log(gk, fieldPlayers);
+      //TASK 3
+      const allPlayers = game.players[0].concat(game.players[1]);
+      // console.log(allPlayers);
+      //TASK 4 'Thiago', 'Coutinho' and 'Perisic'
+      const player1Final = [
+        ...game.players[0],
+        "Thiago",
+        "Coutinho",
+        "Peristic",
+      ];
+      // console.log(player1, player1Final);
+      //TASK 5
+      let { team1, x: draw, team2 } = game.odds;
+      console.log(team1, draw, team2);
+      //TASK 6
+      function printGoals(...players) {
+        return console.log(`${players.length} goals were scored.`);
+      }
+      // printGoals("Davies", "Muller", "Lewandowski", "Kimmich");
+      printGoals(...game.scored);
+      //TASK 7
+      team1 < team2 && console.log("Team 1 is more likely to win.");
+      team1 > team2 && console.log("Team 2 is more likely to win.");
+    </script>
+  </body>
+</html>
