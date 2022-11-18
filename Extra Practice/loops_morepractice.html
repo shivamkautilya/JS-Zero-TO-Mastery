@@ -11,7 +11,7 @@
       //while and do while loop
       let a = 0;
       let arrayEven = [];
-      let evenTill = 9;
+      let evenTill;
       const printEven = function (evenTill) {
         while (a < evenTill * 2) {
           a += 2;
@@ -19,7 +19,7 @@
         }
         return console.log(...arrayEven);
       };
-      printEven(evenTill);
+      printEven(9);
       ////////////////////////////////////////////////////////////////////////////////
       // print even number till no. of even numbers user want USING DO WHILE LOOP
       let i = 0;
@@ -32,11 +32,11 @@
         } while (i < evenTillNumber * 2);
         return console.log(...evenArray);
       }
-      evenTillNumber = prompt(
-        "Enter no. of even Number you want starting from 2."
-      );
-      evenNumber(evenTillNumber);
-      // evenNumber(9);
+      // evenTillNumber = prompt(
+      //   "Enter no. of even Number you want starting from 2."
+      // );
+      // evenNumber(evenTillNumber);
+      evenNumber(9);
     </script>
   </body>
 </html>
