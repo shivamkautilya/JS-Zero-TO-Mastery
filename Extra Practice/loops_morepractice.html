@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice with different types of loops in JS.</title>
+  </head>
+  <body>
+    <script>
+      //while and do while loop
+      let a = 0;
+      let arrayEven = [];
+      let evenTill = 9;
+      const printEven = function (evenTill) {
+        while (a < evenTill * 2) {
+          a += 2;
+          arrayEven.push(a);
+        }
+        return console.log(...arrayEven);
+      };
+      printEven(evenTill);
+      ////////////////////////////////////////////////////////////////////////////////
+      // print even number till no. of even numbers user want USING DO WHILE LOOP
+      let i = 0;
+      let evenArray = [];
+      let evenTillNumber;
+      function evenNumber(evenTillNumber) {
+        do {
+          i += 2;
+          evenArray.push(i);
+        } while (i < evenTillNumber * 2);
+        return console.log(...evenArray);
+      }
+      evenTillNumber = prompt(
+        "Enter no. of even Number you want starting from 2."
+      );
+      evenNumber(evenTillNumber);
+      // evenNumber(9);
+    </script>
+  </body>
+</html>
