@@ -5,20 +5,28 @@ const flights =
   "_Delayed_Departure;fao93766109;tfirstl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30";
 
 // Data needed for first part of the section
-const weekDays = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+const weekDays = [
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday",
+];
 const openingHours = {
   [weekDays[3]]: {
     //you can put expression instead of property name.
-    open: 12,
-    close: 22,
+    open: "10:00",
+    close: "22:00",
   },
   [weekDays[5]]: {
-    open: 11,
-    close: 23,
+    open: "9:00",
+    close: "10:00",
   },
-  [weekDays[6]]: {
-    open: 0, // Open 24 hours
-    close: 24,
+  [weekDays[7]]: {
+    open: "8:00", // Open 24 hours
+    close: "24:00",
   },
 };
 const restaurant = {
@@ -39,7 +47,33 @@ const restaurant = {
     );
   },
 };
+//Lecture 114: Looping Objects: Object Keys, Values, and Entries
+let userDetails = {
+  usrName: "Shivam Kautilya",
+  usrAge: 16,
+  usrBirthday: "2 September",
+  usrGender: "Male",
+};
+const userKeys = Object.keys(userDetails);
+console.log(userKeys, Object.entries(userDetails));
+console.log("-------------------------------------------------");
 
+//Property KEYS = Returns array of Key name of an Object
+const openDays = Object.keys(restaurant.openingHours);
+// console.log(openDays);
+
+//Property VALUES = Returns array of Value inside key name of an object
+const openTiming = Object.values(restaurant.openingHours);
+// console.log(openTiming);
+
+//Property ENTRIES = Returns entire array
+const openingHoursEntries = Object.entries(restaurant.openingHours);
+
+//Looping Object keys, values and entries
+for (const [openDays, { open, close }] of openingHoursEntries) {
+  console.log(`On ${openDays}, we open at ${open} and close at ${close}.`);
+}
+/*
 //Lecture 113: Optional Chaining (?.)
 console.log(restaurant?.name);
 console.log(
@@ -61,6 +95,7 @@ const users = [
 ];
 console.log(users[0]?.name, users[0]?.age ?? "Doesn't exist.");
 console.log(users[9]?.name ?? "Doesn't exist.");
+*/
 /*
 //Lecture 105: The Spread Operator
 //Note: All Iterables can use Spread Operator.NOT OBJECT till ES2017
