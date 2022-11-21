@@ -5,6 +5,22 @@ const flights =
   "_Delayed_Departure;fao93766109;tfirstl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30";
 
 // Data needed for first part of the section
+const weekDays = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+const openingHours = {
+  [weekDays[3]]: {
+    //you can put expression instead of property name.
+    open: 12,
+    close: 22,
+  },
+  [weekDays[5]]: {
+    open: 11,
+    close: 23,
+  },
+  [weekDays[6]]: {
+    open: 0, // Open 24 hours
+    close: 24,
+  },
+};
 const restaurant = {
   name: "Classico Italiano",
   location: "Via Angelo Tavanti 23, Firenze, Italy",
@@ -12,30 +28,19 @@ const restaurant = {
   starterMenu: ["Chowmein", "Paneer Chilli", "Chicken 65", "Salad"],
   mainMenu: ["Pizza", "Pasta", "Dosa"],
 
-  order: function (starterOrder, mainOrder) {
+  order(starterOrder, mainOrder) {
     return [this.starterMenu[starterOrder], this.mainMenu[mainOrder]];
   },
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
-  },
+  openingHours,
   // creating function to destructure objects
-  orderDelivery: function ({ starterOrder, mainOrder, address, time }) {
+  orderDelivery(starterOrder, mainOrder, address, time) {
     return console.log(
       `Wohhooo!! Your Order is received.\n${this.starterMenu[starterOrder]} and ${this.mainMenu[mainOrder]} will be delivered at ${address} at ${time}.`
     );
   },
 };
+
+/*
 //Lecture 105: The Spread Operator
 //Note: All Iterables can use Spread Operator.NOT OBJECT till ES2017
 // from ES2018 we can use for objects also.
@@ -70,6 +75,7 @@ restaurantCopy = {
   ...restaurant,
 };
 console.log(restaurantCopy, restaurant);
+*/
 /*
 //Lecture 104: Destructuring Objects
 const order1 = restaurant.orderDelivery({
