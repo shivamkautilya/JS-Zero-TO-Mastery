@@ -40,6 +40,27 @@ const restaurant = {
   },
 };
 
+//Lecture 113: Optional Chaining (?.)
+console.log(restaurant?.name);
+console.log(
+  restaurant.openingHours?.[[weekDays[3]]] ?? "Poperty doesn't exist."
+);
+//In Methods
+console.log(restaurant.order(0, 0));
+//Advice: Always use Nullish Collescing (??) operator while using optional chaining.
+//In Array
+const users = [
+  {
+    name: "Shivam",
+    age: 16,
+  },
+  {
+    name: "Monu",
+    age: 17,
+  },
+];
+console.log(users[0]?.name, users[0]?.age ?? "Doesn't exist.");
+console.log(users[9]?.name ?? "Doesn't exist.");
 /*
 //Lecture 105: The Spread Operator
 //Note: All Iterables can use Spread Operator.NOT OBJECT till ES2017
