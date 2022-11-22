@@ -213,3 +213,43 @@ const staff = [
   "MD",
 ];
 const staffUnique = Array.from(new Set(staff));
+//Lecture 117: Map Fundamentals
+const calcOpenHours = function () {
+  return restro.get("closeTime") - restro.get("openTime");
+};
+const restro = new Map();
+restro.set("name", "Jain Shree");
+restro
+  .set("location", "Arara Complex,Panchmuhan,Daltonganj")
+  .set("openTime", 10)
+  .set("closeTime", 23)
+  .set("openHours", calcOpenHours())
+  .set("Menu", [
+    "Dosa",
+    "Idli",
+    "Paneer Chilli",
+    "Butter Naan",
+    "Chowmein",
+    "Veg Chopsey",
+    "Veg Soup",
+    "Paneer Kadhai",
+    "Paneer Butter Masala",
+  ])
+  .set(true, "We are Open :D")
+  .set(false, "We are closed. :(")
+  .set("Object Value: ", iAmNotAnObject) //inserting an object with its key name.)
+  .set(
+    "Description",
+    "Jain Shree is one of the best pure veg restaurant in the city."
+  )
+  .set(document.querySelector("h1"), "Heading 1");
+console.log(restro);
+console.log(
+  "Size of this Map: " + restro.size,
+  " \n restro.has method. = ",
+  restro.has(location)
+);
+let time = 17;
+console.log(
+  restro.get(time > restro.get("openTime") && time < restro.get("closeTime"))
+);
