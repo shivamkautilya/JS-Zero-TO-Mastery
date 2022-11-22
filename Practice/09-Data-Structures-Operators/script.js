@@ -186,3 +186,19 @@ console.log(a, b, c, d); //output = 1,3,5,6
 const [p, q, r = "No input"] = [2, 5];
 console.log(p, q, r);
 */
+
+//Lecture 116: Sets
+const randomSet = new Set([2, "Pizza", 21, "Pizza", 2 + 2]);
+console.log(randomSet, randomSet.size);
+randomSet.add("Hello World");
+const iAmNotAnObject = {
+  name: "Lorem",
+  class: "No",
+};
+randomSet.add(iAmNotAnObject);
+console.log(randomSet, randomSet.size);
+console.log(randomSet.has(iAmNotAnObject));
+randomSet.delete(iAmNotAnObject);
+console.log(randomSet.has(iAmNotAnObject));
+// randomSet.clear();
+// console.log(randomSet, randomSet.size);
