@@ -202,3 +202,14 @@ randomSet.delete(iAmNotAnObject);
 console.log(randomSet.has(iAmNotAnObject));
 // randomSet.clear();
 // console.log(randomSet, randomSet.size);
+const staff = [
+  "Waiter",
+  "Manager",
+  "Chef",
+  "Chef",
+  "Waiter",
+  "Chef",
+  "Waiter",
+  "MD",
+];
+const staffUnique = Array.from(new Set(staff));
