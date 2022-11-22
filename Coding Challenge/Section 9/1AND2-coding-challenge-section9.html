@@ -8,6 +8,7 @@
   </head>
   <body>
     <script>
+      //Coding challenge #1
       const game = {
         team1: "Bayern Munich",
         team2: "Borrussia Dortmund",
@@ -78,6 +79,28 @@
       //TASK 7
       team1 < team2 && console.log("Team 1 is more likely to win.");
       team1 > team2 && console.log("Team 2 is more likely to win.");
+      //Coding Challenge #2
+      //TASK 1
+      for (const [key, playerName] of game.scored.entries()) {
+        console.log(`Goal ${parseInt(key) + 1}: ${playerName}`);
+      }
+      //TASK 2
+      let oddsSum = 0;
+      const gameOddsValue = Object.values(game.odds);
+      for (let x of gameOddsValue) {
+        oddsSum += x;
+      }
+      let oddsAvg = oddsSum / gameOddsValue.length;
+      // oddsAvg = Math.round(oddsAvg);
+      console.log(oddsSum, oddsAvg);
+      //TASK 3
+      console.log(`Odd of Victory ${game.team1}: ${game.odds?.team1}`);
+      console.log(`Odd of Victory draw: ${game.odds?.x}`);
+      console.log(
+        `Odd of ${game.team2}: ${
+          game.odds?.team2 ?? "No odd of victory for team 2 given."
+        }`
+      );
     </script>
   </body>
 </html>
