@@ -46,7 +46,7 @@ const restaurant = {
       `Wohhooo!! Your Order is received.\n${this.starterMenu[starterOrder]} and ${this.mainMenu[mainOrder]} will be delivered at ${address} at ${time}.`
     );
   },
-};
+}; /*
 //Lecture 114: Looping Objects: Object Keys, Values, and Entries
 let userDetails = {
   usrName: "Shivam Kautilya",
@@ -73,6 +73,7 @@ const openingHoursEntries = Object.entries(restaurant.openingHours);
 for (const [openDays, { open, close }] of openingHoursEntries) {
   console.log(`On ${openDays}, we open at ${open} and close at ${close}.`);
 }
+*/
 /*
 //Lecture 113: Optional Chaining (?.)
 console.log(restaurant?.name);
@@ -253,3 +254,34 @@ let time = 17;
 console.log(
   restro.get(time > restro.get("openTime") && time < restro.get("closeTime"))
 );
+//Lecture 108: Map Iteration
+const question = new Map([
+  ["question", "Which programming language is best for Web Development?"],
+  [1, "Java"],
+  [2, "C"],
+  [3, "JavaScript"],
+  ["correct-answer", 3],
+  [true, "Correct Answer!!!"],
+  [false, "Wrong Answer"],
+]);
+
+console.log(question.get("question"));
+for (const [key, value] of question) {
+  if (typeof key === "number") {
+    console.log(`Option ${key}: ${value}`);
+  }
+}
+const userAnswer = 3; //parseInt(prompt("Enter Your Option Number."));
+console.log(
+  userAnswer === question.get("correct-answer")
+    ? question.get(true)
+    : question.get(false)
+);
+//convert object to map
+const openHoursMap = new Map(Object.entries(openingHours));
+console.log("----------------------------------------\n", openHoursMap);
+//convert Map to array
+const questionArray = [...question];
+const questionArrayKeys = [...question.keys()];
+const questionArrayValues = [...question.values()];
+console.log(questionArray, questionArrayKeys, questionArrayValues);
