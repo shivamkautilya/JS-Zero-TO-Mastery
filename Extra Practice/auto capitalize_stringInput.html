@@ -21,17 +21,32 @@
       //   firstNameLowerCase,
       //   lastNameLowerCase
       // );
+      /*
       console.log(
         `Total Letters in your name is ${
           firstNameUpperCase.length + lastNameUpperCase.length
         }.`
       );
-      //Auto Capitalising in action
+      //Method 1: Auto Capitalising in action (Not Reccommended)
       firstNameLowerCase.shift();
       lastNameLowerCase.shift();
       firstName = `${firstNameUpperCase[0] + firstNameLowerCase.join("")}`;
       lastName = `${lastNameUpperCase[0] + lastNameLowerCase.join("")}`;
       console.log(`Your name is ${firstName} ${lastName}.`);
+      */
+      //Method 2: Auto Capitalisation (short way)
+      let userName = prompt("Enter your name.");
+      function capitaliseName(userName) {
+        names = userName.split(" ");
+        let nameCapitalise = [];
+        // console.log(names, userName);
+        for (const x of names) {
+          nameCapitalise.push(x[0].toUpperCase() + x.slice(1).toLowerCase());
+        }
+        console.log(nameCapitalise.join(" "));
+      }
+
+      capitaliseName(userName);
     </script>
   </body>
 </html>
