@@ -285,3 +285,41 @@ const questionArray = [...question];
 const questionArrayKeys = [...question.keys()];
 const questionArrayValues = [...question.values()];
 console.log(questionArray, questionArrayKeys, questionArrayValues);
+
+//LECTURE 122: Working with strings - 2
+//remove whitespace and  enter values from string
+const myName = "        ShivAm KauTIlya  \n";
+const trimMyName = myName.trim();
+// console.log(myName, trimMyName);
+//we can call multimethods at same time
+const normalisedName = myName.toLocaleUpperCase().trim();
+// console.log(normalisedName);
+
+//replacing values in a string or any other data type
+const priceBritain = "100,5£";
+const priceUS = priceBritain.replace(",", ".").replace("£", "$");
+console.log(priceBritain, priceUS);
+
+let emergencyCall = "I need yelp!! I said I need yelp!";
+emergencyCall = emergencyCall.replaceAll("yelp", "help");
+console.log(emergencyCall);
+
+//3 methods for string which returns boolean
+const mySelf =
+  "My name is Shivam Kautilya.\nI am 1X years old.\nI like programming.";
+console.log(mySelf.includes("name"));
+
+const myPhone = "Samsung Galaxy J8";
+// let verifyMyPhone = "samSung GALAXY j8"
+function verifyPhone(phoneName) {
+  if (phoneName.toLowerCase() === myPhone.toLowerCase()) {
+    console.log("You may take back your phone.");
+  } else {
+    console.log(
+      `Your phone = ${phoneName}\nYou gave wrong information about phone.You can't take back your phone.`
+    );
+  }
+}
+verifyPhone("SAMSUNG GALAXY J8");
+verifyPhone("samdung j7");
+verifyPhone("Realme Phone");
