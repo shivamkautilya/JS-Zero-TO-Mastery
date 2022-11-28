@@ -323,3 +323,17 @@ function verifyPhone(phoneName) {
 verifyPhone("SAMSUNG GALAXY J8");
 verifyPhone("samdung j7");
 verifyPhone("Realme Phone");
+
+//LECTURE 123: Working with string (Part 3)
+//padding - Adding mentioned chararacter repeatedly so that length of string is equal to mentioned length
+let namePad = "Shivam Kautilya";
+namePad = namePad.padStart(25, "-").padEnd(35, "-");
+console.log(namePad);
+//using padding for masking debit card number;
+const maskCardNumber = function (cardNumber) {
+  let card = cardNumber + "";
+  console.log(card, card.length);
+  return card.slice(-4).padStart(card.length, "X");
+};
+
+console.log(maskCardNumber(123456789123));
